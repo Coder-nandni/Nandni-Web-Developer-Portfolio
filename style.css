@@ -308,7 +308,7 @@ nav a:hover{
   }
 
   /* Hide menu by default */
-  @media (max-width:768px){
+ @media (max-width:768px){
 
   .menu-toggle{
     display:block;
@@ -320,7 +320,8 @@ nav a:hover{
     position:relative;
   }
 
-  nav ul{
+  /* MOBILE MENU DEFAULT HIDDEN */
+  #menu{
     position:absolute;
     top:70px;
     left:0;
@@ -336,17 +337,34 @@ nav a:hover{
     opacity:0;
     transform:translateY(-20px);
 
-    transition:
-      max-height 0.4s ease,
-      opacity 0.3s ease,
-      transform 0.3s ease;
+    transition: all 0.35s ease;
   }
 
-  /* SLIDE DOWN */
-  nav ul.show{
+  /* WHEN HAMBURGER CLICKED */
+  #menu.show{
     max-height:300px;
     opacity:1;
     transform:translateY(0);
+  }
+
+  .hero{
+    flex-direction:column-reverse;
+    text-align:center;
+    gap:30px;
+  }
+
+  .hero::before{
+    font-size:28px;
+    opacity:0.04;
+  }
+
+  .hero-img img{
+    width:200px;
+    height:200px;
+  }
+
+  .section{
+    padding:70px 25px;
   }
 }
 
