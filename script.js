@@ -60,7 +60,7 @@ function sendWhatsApp(e) {
   let email = document.querySelector('input[placeholder="Your Email"]').value;
   let message = document.querySelector('textarea').value;
 
-  let phoneNumber = "918198837746"; // apna WhatsApp number (91 ke sath)
+  let phoneNumber = "918198837746";
 
   let text = `Hello Nandni,%0A%0AName: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
 
@@ -68,12 +68,13 @@ function sendWhatsApp(e) {
   window.open(url, "_blank");
 }
 
+
 /* ===============================
    PRELOADER
    =============================== */
-window.onload = () => {
+window.addEventListener("load", () => {
   const loader = document.getElementById("preloader");
   if(loader){
     loader.style.display = "none";
   }
-};
+});
